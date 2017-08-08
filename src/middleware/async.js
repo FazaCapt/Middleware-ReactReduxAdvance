@@ -1,18 +1,12 @@
 export default function( { dispatch }) {
     return next => action => {
-        console.log(action);
+        // if action dows nor have payload
+        // or, the payload does not have a .then property
+        // we dont care about it, send it on 
+        if(!action.payload || !action.payload.then) {
+            return next(action);
+        }
 
-        next(action);
+        console.log('We dont have a promise', action);
     };
 }
-
-// ================ Sama dengan di atas dan ini adalah penjelasan dari di atas
-// export default function( { dispatch }) {
-//    return function(next) {
-//        return function(action) {
-//            console.log(action);
-
-//            next(action);
-//        }
-//    }
-// }
