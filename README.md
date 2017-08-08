@@ -23,3 +23,7 @@ Click [here](https://github.com/StephenGrider/ReactStarter/releases) then downlo
 > npm install
 > npm start
 ```
+
+#### Json PlaceHolder:
+
+1. https://jsonplaceholder.typicode.com/users
